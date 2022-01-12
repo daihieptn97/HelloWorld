@@ -44,18 +44,18 @@ public class MyService extends Service {
 
     private void runningHello() {
 
-        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("vn.greenapp.worktrack");
-
-        Log.d("DEBUG123", "runningHello: " + (launchIntent == null));
-
-        if (launchIntent != null) {
-//            startActivity(launchIntent);//null pointer check in case package name was not found
-
-//            Intent dialogIntent = new Intent(this, MyActivity.class);
-            launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(launchIntent);
-
-        }
+//        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("vn.greenapp.worktrack");
+//
+//        Log.d("DEBUG123", "runningHello: " + (launchIntent == null));
+//
+//        if (launchIntent != null) {
+////            startActivity(launchIntent);//null pointer check in case package name was not found
+//
+////            Intent dialogIntent = new Intent(this, MyActivity.class);
+//            launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(launchIntent);
+//
+//        }
     }
 
     private void setNotify() {

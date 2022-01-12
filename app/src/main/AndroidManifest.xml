@@ -4,6 +4,13 @@
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
+    <queries>
+        <package android:name="vn.greenapp.worktrack" />
+    </queries>
+    <queries>
+        <package android:name="com.iot.hunonic" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,9 +19,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
         <service
+            android:name=".MyServiceHello"
+            android:label="Hello Hiệp"
+
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+        </service>
+        <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity
             android:name=".MainActivity"
@@ -26,12 +43,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <queries>
-        <package android:name="vn.greenapp.worktrack" />
-    </queries>
-    <queries>
-        <package android:name="com.iot.hunonic" />
-    </queries>
 
 </manifest>

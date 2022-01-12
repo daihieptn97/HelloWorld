@@ -14,7 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Context context = getApplicationContext();
-        Intent intent = new Intent(this, MyService.class); // Build the intent for the service
-        context.startForegroundService(intent);
+//        Intent intent = new Intent(this, MyService.class); // Build the intent for the service
+//        context.startForegroundService(intent);
+
+        Intent intent2 = new Intent(this, MyServiceHello.class); // Build the intent for the service
+        context.startForegroundService(intent2);
     }
 }
