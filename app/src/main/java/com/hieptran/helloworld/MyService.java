@@ -29,17 +29,10 @@ public class MyService extends Service {
     public void onCreate() {
         super.onCreate();
         setNotify();
-        setTimeoutSync(this::runningHello, 1);
+
     }
 
-    public void setTimeoutSync(Runnable runnable, int delay) {
-        try {
-            Thread.sleep(delay);
-            runnable.run();
-        } catch (Exception e) {
-            System.err.println(e);
-        }
-    }
+
 
 
     private void runningHello() {
