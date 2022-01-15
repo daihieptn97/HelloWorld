@@ -8,6 +8,7 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Path;
 import android.graphics.PixelFormat;
 import android.os.Build;
@@ -77,6 +78,11 @@ public class MyServiceHello extends AccessibilityService {
 //                Log.i(TAG, "time = " + 0);
 //            }
 //        }, 1000, 1000);
+
+//        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("vn.greenapp.worktrack");
+//        if (launchIntent != null) {
+//            startActivity(launchIntent);//null pointer check in case package name was not found
+//        }
     }
 
 

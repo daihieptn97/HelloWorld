@@ -3,6 +3,8 @@
     package="com.hieptran.helloworld">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <queries>
         <package android:name="vn.greenapp.worktrack" />
@@ -21,28 +23,27 @@
         <service
             android:name=".MyServiceHello"
             android:label="Hello Hiệp"
-
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
-
         </service>
         <receiver android:name=".MyReceiver" />
         <service
             android:name=".MyService"
             android:enabled="true"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+    <queries>
+        <package android:name="vn.greenapp.worktrack" />
+    </queries>
 
 </manifest>
